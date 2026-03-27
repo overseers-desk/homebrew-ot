@@ -1,0 +1,1 @@
+# rezdy-mcp
