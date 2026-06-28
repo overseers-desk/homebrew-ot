@@ -1,12 +1,12 @@
 # Homebrew formula for questlog.
 # Install:
-#   brew tap SmartLayer/ot
+#   brew tap overseers-desk/ot
 #   brew install questlog
 
 class Questlog < Formula
   desc "GUI for finding, reading, and reopening past Claude Code sessions"
-  homepage "https://github.com/SmartLayer/questlog"
-  url "https://github.com/SmartLayer/questlog/archive/refs/tags/v1.1.4.tar.gz"
+  homepage "https://github.com/overseers-desk/questlog"
+  url "https://github.com/overseers-desk/questlog/archive/refs/tags/v1.1.4.tar.gz"
   sha256 "0c16608a07264f1aa3c380d2366cec3ab7c42f9f0e92182e154d71a4dae0c239"
   license "MIT"
 

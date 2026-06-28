@@ -1,14 +1,14 @@
 # Homebrew formula for mailroom.
 # Install:
-#   brew tap SmartLayer/ot
+#   brew tap overseers-desk/ot
 #   brew install mailroom
 
 class Mailroom < Formula
   include Language::Python::Virtualenv
 
   desc "Email toolkit for AI assistants and command-line scripting"
-  homepage "https://github.com/SmartLayer/mailroom"
-  url "https://github.com/SmartLayer/mailroom/archive/refs/tags/v1.1.15.tar.gz"
+  homepage "https://github.com/overseers-desk/mailroom"
+  url "https://github.com/overseers-desk/mailroom/archive/refs/tags/v1.1.15.tar.gz"
   sha256 "930787e92e85ea37a410e7783c51117c6777d095e43863a32522de838a92b975"
   license "MIT"
 
