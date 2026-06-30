@@ -3,17 +3,18 @@
 #   brew tap overseers-desk/od
 #   brew install scribe
 #
-# NOTE: scribe is currently Linux-only at runtime. This formula installs cleanly
-# on macOS so the tap is usable, but scribe will not yet run there: it shells out
-# to dotool (uinput keystrokes), parecord (PulseAudio), and wl-copy (Wayland
-# clipboard), and needs the json/yaml (tcllib) and tls Tcl packages. The macOS
-# port — native paste via Cmd+V, pbcopy, a mic backend — is tracked separately.
+# NOTE: scribe runs without configuration as a dictation tool, but its Linux
+# runtime is still incomplete on macOS: it shells out to dotool (uinput
+# keystrokes), parecord (PulseAudio), and wl-copy (Wayland clipboard), and the
+# optional style pass needs the json/yaml (tcllib) and tls Tcl packages. This
+# formula installs cleanly so the tap is usable; the macOS port — native paste
+# via Cmd+V, pbcopy, a mic backend — is tracked separately.
 
 class Scribe < Formula
   desc "Take dictation or clipboard text, restyle it, and type/paste it back"
   homepage "https://github.com/overseers-desk/scribe"
   url "https://github.com/overseers-desk/scribe/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "b4f5bbccaf16cf949ad08a526f9d77fbd11e66b9e60f1caba4aa621597514782"
+  sha256 "8bd7396b3acf7a569a70ae5ae3ee7e82ebcf7dab9ad3ac19332ad229fc6b467b"
   license "GPL-3.0-only"
 
   depends_on "tcl-tk"
@@ -24,7 +25,8 @@ class Scribe < Formula
     # and symlink it onto PATH; file normalize resolves the symlink, so APP_DIR
     # lands in pkgshare where the data lives. deepseek.json is user-supplied (not
     # shipped) and current-mode.conf is runtime state, so neither is installed.
-    pkgshare.install "scribe.tcl", "styles", "system-prompts.yaml", "dialect-us-to-british.tsv"
+    pkgshare.install "scribe.tcl", "styles", "system-prompts.yaml",
+                     "dialect-us-to-british.tsv", "config.example.toml"
 
     # Pin the shebang to Homebrew's keg-only wish9.0 (tcl-tk is not on PATH, so
     # #!/usr/bin/env wish9.0 would not resolve).
