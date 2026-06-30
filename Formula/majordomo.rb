@@ -1,6 +1,6 @@
 # Homebrew formula for majordomo.
 # Install:
-#   brew tap overseers-desk/ot
+#   brew tap overseers-desk/od
 #   brew install majordomo
 
 class Majordomo < Formula
@@ -8,8 +8,8 @@ class Majordomo < Formula
 
   desc "Read and report Google Chat task activity"
   homepage "https://github.com/overseers-desk/majordomo"
-  url "https://github.com/overseers-desk/majordomo/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "3685e05b514c8626021867afedc0c2158c84c27c369ae700a45767cbfd56cb40"
+  url "https://files.pythonhosted.org/packages/c1/99/7f12704cea55985a0edd77eb00cf462ffe870fd29fa4ff89d56d019efe11/majordomo-0.1.4.tar.gz"
+  sha256 "73b72255d0403947cd8afff2a209493f54db4e56b99173a35b1c60bce0ae1dd7"
   license "GPL-3.0-only"
 
   depends_on "python@3.13"
