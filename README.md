@@ -3,6 +3,7 @@
 A Homebrew tap for the Overseer's Desk command-line tools. Tap it once, then install any tool:
 
 ```sh
+brew trust overseers-desk/od
 brew tap overseers-desk/od
 brew install crude courier questlog
 ```
